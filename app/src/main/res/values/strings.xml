@@ -1,0 +1,202 @@
+<resources>
+    <string name="app_name">AZip</string>
+
+    <string name="file_explorer">File Explorer</string>
+    <string name="archive_files">Archive Files</string>
+    <string name="recent_files">Recent Files</string>
+    <string name="show_all">Show all</string>
+    <string name="search">Search</string>
+    <string name="rename">Rename</string>
+    <string name="copy">Copy</string>
+    <string name="paste">Paste</string>
+    <string name="extract">Extract</string>
+    <string name="compress">Compress</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="select">Select</string>
+    <string name="deselect">Deselect all</string>
+    <string name="browser">Browse</string>
+    <string name="azip">Azip</string>
+    <string name="go_to_setting">Go to Settings</string>
+    <string name="setting">Settings</string>
+    <string name="go_back">Go Back</string>
+    <string name="permission_manage_external_storage">Please allow permission manage storage access to edit file on your phone.</string>
+    <string name="please_grants_permission">Please allow external storage access to save file on your phone.</string>
+    <string name="please_grant_permission">Please allow external storage access to edit document file.</string>
+    <string name="logged_in">Account is logged in</string>
+    <string name="wifi_unavailable_error_message">Unable to access the internet, please visit connection settings</string>
+    //menu
+    <string name="upgrade_pro_version">Upgrade Pro Version</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="rate">Rate Us</string>
+    <string name="feedbacks">Feedback</string>
+    //processing
+    <string name="processing">Processing</string>
+    <string name="adding">Compressing</string>
+    <string name="extracting">Extracting</string>
+    <string name="run_background">Run in Background</string>
+    <string name="running_background">Running in Background</string>
+    //file explore
+    <string name="doc">Doc</string>
+    <string name="photo">Photo</string>
+    <string name="music">Music</string>
+    <string name="download">Download</string>
+    <string name="video">Video</string>
+    <string name="apk">Apk</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="exit">Exit</string>
+    //dialog
+    <string name="file_name">File name</string>
+    <string name="folder_name">Folder name</string>
+    <string name="delete_request">Are you sure you want to delete</string>
+    <string name="folder">Folder</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="rar">RAR</string>
+    <string name="zip">ZIP</string>
+    <string name="rar_4.x">RAR 4.x</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+
+    <string name="from_file">From file</string>
+    <string name="to_file">To file</string>
+    <string name="ask_before_overwrite">Ask before overwrite</string>
+    <string name="overwrite_without_prompt">Overwrite without prompt</string>
+    <string name="skip_existing_files">Skip existing files</string>
+    <string name="wrong_password">Wrong password. Please try again.</string>
+
+    //pro version
+    <string name="compress_multiple_files_at_once">Compress multiple files at once</string>
+    <string name="support_extracting_30_file_formats">Support extracting 30+ file formats</string>
+    <string name="extract_and_compress_file_with_original_quality">Extract and compress file with original quality</string>
+    <string name="compress_file_with_size_reduceup_to_40">Compress file with size reduce up to 40%</string>
+    <string name="set_strong_passwords_to_protect_files">Set strong passwords to protect files</string>
+    <string name="monthly">Monthly</string>
+    <string name="three_days_using_for_free">3 days using for free then 29$/ month</string>
+    <string name="three_day_free_trial">3- Days free trial</string>
+    <string name="cost_three_day">Then 19$/ week</string>
+    <string name="life_time">Lifetime</string>
+    <string name="cost_life_time">199$</string>
+    <string name="subcribe">SUBSCRIBE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="success">Success</string>
+    <string name="exit_warning">Warning (Non fatal error(s))</string>
+    <string name="exit_fault">Errors </string>
+    <string name="exit_command">Command line error</string>
+    <string name="exit_memmory">Not enough memory for operation</string>
+    <string name="exit_not_support">User stopped the process</string>
+
+    <string name="rename_success">Rename Success</string>
+    <string name="compress_success">Compress Success</string>
+    <string name="compress_successfully">Compress Successfully</string>
+    <string name="extract_success">Extract Success</string>
+    <string name="extract_successfully">Extract File %s Successfully</string>
+    <string name="not_extract_success">Not Extract Success</string>
+    <string name="delete_success">Delete Success</string>
+    <string name="archive_format">Archive format</string>
+    <string name="create_new_folder">Create new folder</string>
+    <string name="warning_name_folder_empty">Folder name cannot be empty!</string>
+    <string name="directory_already_exists">Directory already exists</string>
+    <string name="warning_name_file_empty">You must enter the file name!</string>
+    <string name="azip_uppercase">AZIP</string>
+    <string name="compressor_and_extractor"><![CDATA[Compressor & Extractor]]></string>
+    <string name="using_for_free_then_29_month">Using for free then 29$/ month</string>
+    <string name="users_permanently">Users Permanently</string>
+    <string name="month">Month</string>
+    <string name="then_29_month">Then 29$/ Month</string>
+    <string name="_199">199$</string>
+    <string name="warning_extract_file">This is not a compressed file</string>
+    <string name="running_complete">Running Complete</string>
+    <string name="today">Today</string>
+    <string name="change_file_extension">Change file extension</string>
+    <string name="apps_need_permission_to_access_storage">Apps need permission to access storage.</string>
+    <string name="do_you_want_to_allow_this">Do you want to allow this?</string>
+    <string name="change">Change</string>
+    <string name="the_file_extention_will_be_changed">The file extension will be changed. This may cause the file to become unusable.</string>
+    <string name="warning_exit">Do you really want to quit?</string>
+    <string name="warning_name_file_exists">The file already exists. Do you want to overwrite the file</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="missing_suffix_name">Name file is missing the format file</string>
+    <string name="error">Error</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="warning_paste_sub_folder">The Destination Folder is a sub folder of the source folder</string>
+    <string name="rename_wrong_format">Rename wrong format</string>
+    <string name="name_file_need_to_be_changed">Name file needs to be changed</string>
+    <string name="no_photo">No Photo</string>
+    <string name="no_video">No Video</string>
+    <string name="empty">Empty</string>
+    <string name="no_recent_files">No recent files</string>
+    <string name="ask_user_want_overwrite">Folder is exists. Do you want overwrite?</string>
+    <string name="are_you_sure_you_want_to_cancel">Are you sure you want to cancel?</string>
+    <string name="the_file_not_support_decompress">The file is not supported to decompress</string>
+    <string name="copying">Copying…</string>
+    <string name="deleting">Deleting…</string>
+    <string name="no_files_found">No files found</string>
+    <string name="no_application_found_to_open_this_file">No application found to open this file</string>
+    <string name="cloud">Cloud</string>
+    <string name="cloud_storage">Cloud storage</string>
+    <string name="edit">Edit</string>
+    <string name="google_drive">Google Drive</string>
+    <string name="view">View</string>
+    <string name="sort">Sort</string>
+    <string name="detailed">Detailed</string>
+    <string name="compact">Compact</string>
+    <string name="grid">Grid</string>
+    <string name="name">Name</string>
+    <string name="date">Date</string>
+    <string name="type">Type</string>
+    <string name="size">Size</string>
+    <string name="desc">Desc</string>
+    <string name="remove_accound">Remove account?</string>
+    <string name="remove">Remove</string>
+    <string name="add_google_drive_account">Add Google Drive account</string>
+    <string name="add_onedrive_account">Add OneDrive account</string>
+    <string name="add_dropbox_account">Add Dropbox account</string>
+    <string name="last_logged_in">"Last logged in"</string>
+    <string name="at">at </string>
+    <string name="done">Done</string>
+    <string name="one_drive">One Drive</string>
+    <string name="size_large">Large</string>
+    <string name="size_medium">Medium</string>
+    <string name="size_small">Small</string>
+    <string name="drop_box">Drop Box</string>
+    <string name="gg_drive">Google Drive</string>
+    <string name="add_another_account">Add another account</string>
+    <string name="you_will_no_longer">You will no longer have access to files from this Google Drive account in Azip.</string>
+    <string name="download_file">Download file </string>
+    <string name="download_success">Download Success </string>
+    <string name="download_failed">Download Failed </string>
+    <string name="download_file_success_in">Successfully downloaded file from </string>
+    <string name="download_file_fail_in">Failed downloaded file from </string>
+    <string name="toast_start_download_file">Start downloading files, you can see the progress in the notification</string>
+    <string name="authorization_has_expired">Authorization has expired please login again</string>
+    <string name="folder_empty">This folder is empty</string>
+    <string name="you_will_no_longers">You will no longer have access to files from this </string>
+    <string name="account_in_azip"> account in Azip.</string>
+    <string name="check_connect_internet">Please check the internet again</string>
+    <string name="account_error">Login error, Please login again</string>
+<!--    <string name="login_error">Login error, Please try again</string>-->
+    <string name="get_file_link_share">Getting file sharing link</string>
+    <string name="login_drive_failed">Account Login failed</string>
+    <string name="warning_format_beta">*Feature compress with this format is still in beta version so it may be work incorrectly</string>
+    //spinner format
+    <string-array name="archive_format">
+        <item>7z</item>
+        <item>zip</item>
+        <item>tar</item>
+        <item>tar.bz2</item>
+        <item>tar.gz</item>
+        <item>tar.xz</item>
+        <item>tar.lz4</item>
+        <item>tar.zstd</item>
+        <!--        <item>bzip2</item>-->
+        <!--        <item>gzip</item>-->
+        <!--        <item>xz</item>-->
+        <!--        <item>lz4</item>-->
+        <!--        <item>zstd</item>-->
+
+    </string-array>
+</resources>

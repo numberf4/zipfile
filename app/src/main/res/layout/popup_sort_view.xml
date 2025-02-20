@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csl_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_20"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingEnd="@dimen/margin_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_20"
+            android:layout_marginHorizontal="@dimen/margin_15"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="@dimen/margin_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_18">
+
+                <ImageView
+                    android:id="@+id/iv_close_sort_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="@dimen/margin_4"
+                    android:src="@drawable/close_sort_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_23"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/view"
+                    android:textColor="@color/text_blueFile"
+                    android:textSize="@dimen/text15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_presentation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginEnd="@dimen/margin_22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_view" />
+
+                <TextView
+                    android:id="@+id/tv_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_23"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/sort"
+                    android:textColor="@color/text_blueFile"
+                    android:textSize="@dimen/text15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rcv_presentation_view" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_sort_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginEnd="@dimen/margin_22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sort" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

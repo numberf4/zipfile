@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".ui.explorer.ExploreFragment">
+
+        <include
+            android:id="@+id/layout_header_explore"
+            layout="@layout/layout_header_child_explore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_explorer_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_15"
+            android:background="@drawable/custom_bg_explorer"
+            android:paddingHorizontal="@dimen/margin_28"
+            android:paddingVertical="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_header_explore">
+
+            <TextView
+                android:id="@+id/tv_doc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:drawableTop="@drawable/ic_doc_explorer"
+                android:drawablePadding="@dimen/margin_4"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/doc"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:drawableTop="@drawable/ic_photo_explorer"
+                android:drawablePadding="@dimen/margin_4"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/photo"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintEnd_toStartOf="@id/tv_music"
+                app:layout_constraintStart_toEndOf="@id/tv_doc"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:drawableTop="@drawable/ic_music_explorer"
+                android:drawablePadding="@dimen/margin_4"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/music"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:drawableTop="@drawable/ic_download_explorer"
+                android:drawablePadding="@dimen/margin_4"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/download"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_doc" />
+
+            <TextView
+                android:id="@+id/tv_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawableTop="@drawable/ic_video_explorer"
+                android:drawablePadding="@dimen/margin_4"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/video"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintEnd_toStartOf="@id/tv_apk"
+                app:layout_constraintStart_toEndOf="@id/tv_download"
+                app:layout_constraintTop_toTopOf="@id/tv_download" />
+
+            <TextView
+                android:id="@+id/tv_apk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawableTop="@drawable/ic_apk_explorer"
+                android:drawablePadding="@dimen/margin_4"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/apk"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_download" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_directory"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/bg_option_select"
+            android:paddingStart="@dimen/margin_8"
+            android:paddingEnd="@dimen/margin_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_explorer_frame"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_directory_file" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_explorer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:paddingStart="@dimen/margin_2"
+            android:clipToPadding="false"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcv_directory"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_recent_file" />
+
+        <vn.tapbi.zazip.ui.custom.RecyclerFastScroller
+            android:id="@+id/fast_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:rfs_touchTargetWidth="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/recycler_explorer" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvNeedPermission, tvGotoSetting" />
+
+        <TextView
+            android:id="@+id/tvNeedPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apps_need_permission_to_access_storage"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvGotoSetting"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recycler_explorer"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvGotoSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_setting"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNeedPermission" />
+
+        <ProgressBar
+            android:id="@+id/progress_explorer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint_explorer_frame" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/recycler_explorer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/recycler_explorer" />
+
+        <View
+            android:id="@+id/view_explorer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trans_home"
+            android:visibility="gone" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

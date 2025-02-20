@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/layoutHeaderCloud"
+                layout="@layout/layout_header_child_explore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="#FAFAFC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutHeaderCloud" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_16sp"
+                android:fontFamily="@font/sf_pro_medium"
+                android:text="@string/cloud_storage"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/text_16sp"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center"
+                android:text="@string/edit"
+                android:textSize="@dimen/text15sp"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/view" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcAccount"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="0dp"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

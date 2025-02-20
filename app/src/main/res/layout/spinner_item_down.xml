@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_archive_format_down"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_40"
+    android:fontFamily="@font/sf_pro_medium"
+    android:gravity="center_vertical"
+    android:paddingStart="@dimen/margin_16"
+    android:background="@color/white"
+    android:textColor="@color/text_blue"
+    android:drawableBottom="@drawable/underline_view_spinner"
+    android:textSize="@dimen/text13sp" />
+

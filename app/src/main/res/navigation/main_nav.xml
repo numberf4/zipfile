@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/demo_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/upgrade_fragment"
+        android:name="vn.tapbi.zazip.ui.menu.UpgradeVersionFragment"
+        android:label="upgrade"
+        tools:layout="@layout/fragment_upgrade_version" />
+    <fragment
+        android:id="@+id/policy_fragment"
+        android:name="vn.tapbi.zazip.ui.menu.PolicyFragment"
+        android:label="@string/privacy_policy"
+        tools:layout="@layout/fragment_policy" />
+    <fragment
+        android:id="@+id/process_fragment"
+        android:name="vn.tapbi.zazip.ui.process.ProcessFragment"
+        android:label="@string/processing"
+        tools:layout="@layout/fragment_process">
+        <action
+            android:id="@+id/action_process_to_homeFrament"
+            app:destination="@id/homeFragment"
+            app:exitAnim="@anim/anim_exit_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="vn.tapbi.zazip.ui.main.home.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_upgrade_fragment"
+            app:destination="@id/upgrade_fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_explorerFragment"
+            app:destination="@id/explorerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_archiveFragment"
+            app:destination="@id/archiveFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_policy_fragment"
+            app:destination="@id/policy_fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cloudFragment"
+            app:destination="@id/cloudFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/explorerFragment"
+        android:name="vn.tapbi.zazip.ui.explorer.ExploreFragment"
+        android:label="explorer"
+        tools:layout="@layout/fragment_explorer">
+        <action
+            android:id="@+id/action_explorerFragment_to_docFragment"
+            app:destination="@id/docFragment" />
+        <action
+            android:id="@+id/action_explorerFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/archiveFragment"
+        android:name="vn.tapbi.zazip.ui.archive.ArchiveFragment"
+        android:label="archive"
+        tools:layout="@layout/fragment_archive" />
+
+    <fragment
+        android:id="@+id/docFragment"
+        android:name="vn.tapbi.zazip.ui.explorer.doc.DocFragment"
+        android:label="doc"
+        tools:layout="@layout/fragment_doc" />
+
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="vn.tapbi.zazip.ui.explorer.photo.PhotoFragment"
+        android:label="photo"
+        tools:layout="@layout/fragment_photo" />
+    <fragment
+        android:id="@+id/cloudFragment"
+        android:name="vn.tapbi.zazip.ui.cloud.CloudFragment"
+        android:label="cloud"
+        tools:layout="@layout/fragment_cloud" />
+    <fragment
+        android:id="@+id/detailCloudFragment"
+        android:name="vn.tapbi.zazip.ui.detail.DetailCloudFragment"
+        android:label="detailCloud"
+        tools:layout="@layout/fragment_detail_cloud" />
+</navigation>

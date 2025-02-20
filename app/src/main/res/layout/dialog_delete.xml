@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="mainViewModel"
+            type="vn.tapbi.zazip.ui.main.MainViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_bg_dialog"
+        android:paddingHorizontal="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_16"
+        android:paddingBottom="@dimen/margin_28">
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_medium"
+            android:text="@string/delete"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cancel_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel_dialog"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_delete" />
+
+        <TextView
+            android:id="@+id/tv_delete_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/delete_request"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_delete" />
+
+        <TextView
+            android:id="@+id/tv_delete_fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text15sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_delete_request" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/btn_delete_yes"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_button36"
+            android:fontFamily="@font/sf_pro_medium"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            android:background="@drawable/bg_button_effect_gray"
+            android:text="@string/yes"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text18sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_delete_fileName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_delete_no"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_button36"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            android:fontFamily="@font/sf_pro_medium"
+            android:background="@drawable/bg_button_effect"
+             android:text="@string/no"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text18sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/btn_delete_yes" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

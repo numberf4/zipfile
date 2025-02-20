@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_intro"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_upgrade_version"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_18"
+                android:src="@drawable/ic_azip_pro"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_intro" />
+
+            <TextView
+                android:id="@+id/tv_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/compressor_and_extractor"
+                android:textColor="@color/text_grays"
+                android:textSize="@dimen/text_16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/iv_pro"
+                app:layout_constraintTop_toBottomOf="@id/iv_pro" />
+
+            <TextView
+                android:id="@+id/tv_intro_compress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_22"
+                android:drawableStart="@drawable/ic_compress_pro"
+                android:drawablePadding="@dimen/margin_10"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/compress_multiple_files_at_once"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_pro"
+                app:layout_constraintTop_toBottomOf="@id/tv_intro" />
+
+            <TextView
+                android:id="@+id/tv_intro_extract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:drawableStart="@drawable/ic_extract_pro"
+                android:drawablePadding="@dimen/margin_10"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/support_extracting_30_file_formats"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_pro"
+                app:layout_constraintTop_toBottomOf="@id/tv_intro_compress" />
+
+            <TextView
+                android:id="@+id/tv_intro_folder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:drawableStart="@drawable/ic_folder_pro"
+                android:drawablePadding="@dimen/margin_10"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/extract_and_compress_file_with_original_quality"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_pro"
+                app:layout_constraintTop_toBottomOf="@id/tv_intro_extract" />
+
+            <TextView
+                android:id="@+id/tv_intro_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:drawableStart="@drawable/ic_file_pro"
+                android:drawablePadding="@dimen/margin_10"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/compress_file_with_size_reduceup_to_40"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_pro"
+                app:layout_constraintTop_toBottomOf="@id/tv_intro_folder" />
+
+            <TextView
+                android:id="@+id/tv_intro_look"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:drawableStart="@drawable/ic_pass_pro"
+                android:drawablePadding="@dimen/margin_10"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/set_strong_passwords_to_protect_files"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_pro"
+                app:layout_constraintTop_toBottomOf="@id/tv_intro_file" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/csl_content_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginTop="@dimen/height_button36"
+                android:background="@drawable/bg_best_offer_select"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_intro_look">
+
+                <ImageView
+                    android:id="@+id/iv_check_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_40"
+                    android:src="@drawable/ic_select_item"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/tv_user_permanently"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/users_permanently"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline"
+                    app:layout_constraintStart_toEndOf="@id/iv_check_user"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_fee_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/using_for_free_then_29_month"
+                    android:textColor="@color/text_grays"
+                    android:textSize="@dimen/text12sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_user_permanently"
+                    app:layout_constraintTop_toBottomOf="@id/guideline" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/csl_content_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/bg_offer"
+                android:paddingVertical="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csl_content_user">
+
+                <ImageView
+                    android:id="@+id/iv_check_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_40"
+                    android:src="@drawable/ic_not_select_item"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/month"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_fee_month"
+                    app:layout_constraintStart_toEndOf="@id/iv_check_month" />
+
+                <TextView
+                    android:id="@+id/tv_fee_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/then_29_month"
+                    android:textColor="@color/text_grays"
+                    android:textSize="@dimen/text12sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_month"
+                    app:layout_constraintTop_toBottomOf="@id/tv_month" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/csl_content_life_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/bg_offer"
+                android:paddingVertical="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csl_content_month">
+
+                <ImageView
+                    android:id="@+id/iv_check_life_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_40"
+                    android:src="@drawable/ic_not_select_item"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_life_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/life_time"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_fee_life_time"
+                    app:layout_constraintStart_toEndOf="@id/iv_check_life_time" />
+
+                <TextView
+                    android:id="@+id/tv_fee_life_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/_199"
+                    android:textColor="@color/text_grays"
+                    android:textSize="@dimen/text12sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_life_time"
+                    app:layout_constraintTop_toBottomOf="@id/tv_life_time" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_subscribe"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_34"
+                android:layout_marginBottom="@dimen/margin_44"
+                android:background="@drawable/bg_button_effect_subscribe"
+                android:text="@string/subcribe"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csl_content_life_time" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_bg_dialog"
+        android:paddingHorizontal="@dimen/margin_16"
+        android:paddingVertical="@dimen/margin_30">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_warning_overwrite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/ask_user_want_overwrite"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_allow_overwrite"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_button_effect_gray"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:text="@string/yes"
+            android:layout_marginTop="@dimen/margin_20"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text24sp"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_warning_overwrite" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_denied_overwrite"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_button_effect"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:text="@string/no"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/tv_warning_overwrite" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

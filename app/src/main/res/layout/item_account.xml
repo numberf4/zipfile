@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <View
+            android:id="@+id/viewTop"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_20"/>
+        <View
+            android:id="@+id/viewClickItem"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintStart_toEndOf="@id/ivDeleteAccount"
+            app:layout_constraintBottom_toTopOf="@+id/viewGgDrive"
+            app:layout_constraintTop_toBottomOf="@id/viewTop" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDeleteAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete_account"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/viewGgDrive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewTop" />
+
+        <TextView
+            android:id="@+id/tvGgDrive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_icon_gg_drive"
+            android:drawablePadding="@dimen/margin_16"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="13dp"
+            android:paddingStart="@dimen/margin_16"
+            android:text="@string/google_drive"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/viewGgDrive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivDeleteAccount"
+            app:layout_constraintTop_toBottomOf="@id/viewTop" />
+
+        <ImageView
+            android:id="@+id/ivArrowNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin14"
+            android:src="@drawable/ic_icon_add"
+            app:layout_constraintBottom_toBottomOf="@id/viewGgDrive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutDrive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp"
+            android:paddingStart="@dimen/margin_16"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivDeleteAccount"
+            app:layout_constraintTop_toBottomOf="@id/viewTop">
+
+            <ImageView
+                android:id="@+id/imgIconCloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_gg_drive"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAccountName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="45dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvDetailTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgIconCloud"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDetailTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/folder_empty"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/tvAccountName"
+                app:layout_constraintStart_toStartOf="@id/tvAccountName"
+                app:layout_constraintTop_toBottomOf="@id/tvAccountName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewGgDrive"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="#E0E0E0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/layoutDrive"
+            app:layout_constraintTop_toBottomOf="@id/layoutDrive" />
+
+        <TextView
+            android:id="@+id/tvAddAccountOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/ic_icon_add"
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/sf_pro_medium"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/margin_20"
+            android:paddingStart="20dp"
+            android:text="@string/add_another_account"
+            android:textColor="#353535"
+            android:textSize="@dimen/text15sp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/viewGgDrive" />
+        <View
+            android:id="@+id/viewBot"
+            app:layout_constraintTop_toBottomOf="@id/tvAddAccountOther"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_30"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

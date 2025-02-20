@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csl_sort_view"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="@dimen/margin_10"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_view"
+            android:src="@drawable/option_view_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_type_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/internal_storage"
+            android:textSize="@dimen/margin_10"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/button_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

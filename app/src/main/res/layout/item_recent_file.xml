@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csl_item_recent_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="7dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingVertical="@dimen/margin_6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_item_recent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_noname_file"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/imgBtnVideo"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_btn_video"
+                app:layout_constraintEnd_toEndOf="@id/img_item_recent"
+                app:layout_constraintTop_toTopOf="@id/img_item_recent"
+                app:layout_constraintBottom_toBottomOf="@id/img_item_recent"
+                app:layout_constraintStart_toStartOf="@id/img_item_recent"
+              />
+
+            <vn.tapbi.zazip.ui.custom.CustomClickItem
+                android:id="@+id/img_item_check"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeCircle="1dp" />
+            <!--        <ImageView-->
+            <!--            android:id="@+id/img_item_check"-->
+            <!--            android:layout_width="35dp"-->
+            <!--            android:layout_height="35dp"-->
+            <!--            android:layout_marginHorizontal="@dimen/margin_16"-->
+            <!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+            <!--            android:clickable="true"-->
+            <!--            android:focusable="true"-->
+            <!--            android:scaleType="centerInside"-->
+            <!--            android:src="@drawable/ic_check_false"-->
+            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--            app:layout_constraintRight_toRightOf="parent"-->
+            <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_18"
+                android:layout_marginEnd="60dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Name file"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text15sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_item_recent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="detail file -- size -- time"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_name_file_compact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_18"
+                android:layout_marginEnd="60dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text15sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_item_recent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:layout_marginHorizontal="@dimen/margin_12"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="@dimen/margin_4"
+                android:src="@drawable/ic_cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewSpace"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/csl_item_recent_file" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_bg_dialog"
+        android:paddingHorizontal="@dimen/margin_16"
+        android:paddingVertical="@dimen/margin_22">
+
+        <TextView
+            android:id="@+id/tvTitlePermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="Request Permissions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/margin_17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_content_request_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:text="@string/apps_need_permission_to_access_storage"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitlePermission" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCancelSetting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@drawable/bg_button_gray"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="#828282"
+            app:layout_constraintEnd_toStartOf="@id/btnOkPermission"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_content_request_permission" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnOkPermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:background="@drawable/bg_button_blue"
+            android:fontFamily="@font/sf_pro_medium"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/setting"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnCancelSetting"
+            app:layout_constraintTop_toBottomOf="@id/tv_content_request_permission" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

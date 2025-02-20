@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="vn.tapbi.zazip.ui.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_bg_dialog"
+        android:paddingHorizontal="@dimen/margin_16">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cancel_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_cancel_dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rename"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_rename" />
+
+        <TextView
+            android:id="@+id/tv_rename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="@font/sf_pro_medium"
+            android:gravity="center_horizontal"
+            android:text="@string/rename"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_reName_fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="@string/file_name"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rename" />
+
+        <EditText
+            android:id="@+id/edt_dialog_reName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin_6"
+            android:background="@drawable/custom_bg_edt"
+            android:gravity="center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/margin_10"
+            android:textColor="@color/text_blue"
+            android:textCursorDrawable="@drawable/ic_cursor_edittext"
+            android:textSize="@dimen/text15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reName_fileName" />
+        <!--        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890. àáảãạăắằẳẵặâấầẩẫậòóỏõọôồốổỗộơờớởỡợèéẻẽẹêềếểễệìíỉĩịùúủũụưừứửữựỳýỷỹỵÁÀÃẢẠĂẰẮẲẴẶÂẦẤẨẪẬÔỒỐỔỖỘƠỜỚỞỠỢÊỀẾỂỄỆỪƯỨỬỮỰđĐÒÓỎÕỌÌÍỈĨỊÈÉẺẼẸÙÚỦŨỤỲÝỶỸỴ"-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_button36"
+            android:layout_marginHorizontal="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_18"
+            android:background="@drawable/bg_button_effect"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text17sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_dialog_reName" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_button36"
+            android:layout_marginHorizontal="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_18"
+            android:background="@drawable/bg_button_effect"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edt_dialog_reName" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ok" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

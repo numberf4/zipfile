@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csl_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/img_explorer_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/margin_4"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/iv_sort_view"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@id/img_search_explorer"
+            app:layout_constraintTop_toTopOf="@id/img_search_explorer"
+            app:layout_constraintBottom_toBottomOf="@id/img_search_explorer"
+            android:src="@drawable/ic_option_view_black"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_search_explorer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:visibility="invisible"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/margin_4"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_explorer_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:fontFamily="@font/sf_pro_medium"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/text17sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_explorer"
+            style="@style/cursorColor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@drawable/custom_bg_search"
+            android:textSize="@dimen/text17sp"
+            android:visibility="gone"
+            app:closeIcon="@null"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_explorer_cancel"
+            app:layout_constraintStart_toEndOf="@+id/img_explorer_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryBackground="@null"
+            app:queryHint="@string/search"
+            app:searchIcon="@null" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="vn.tapbi.zazip.ui.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslBrowser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_dialog_detail_select"
+        android:paddingTop="@dimen/margin_24">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_browse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_medium"
+            android:text="@string/browser"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cancel_browse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/margin_4"
+            android:src="@drawable/ic_cancel_dialog"
+            app:layout_constraintBottom_toBottomOf="@id/tv_browse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_browse" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_directory_browse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/bg_option_select"
+            android:paddingHorizontal="@dimen/margin_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_browse"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_directory_file" />
+
+        <ImageView
+            android:id="@+id/iv_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:src="@drawable/ic_folder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_directory_browse" />
+
+        <TextView
+            android:id="@+id/tv_create_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_6"
+            android:fontFamily="@font/sf_pro_medium"
+            android:paddingHorizontal="@dimen/margin_6"
+            android:paddingVertical="@dimen/margin_8"
+            android:text="@string/create_new_folder"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/text15sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/iv_folder"
+            app:layout_constraintStart_toEndOf="@id/iv_folder"
+            app:layout_constraintTop_toTopOf="@id/iv_folder" />
+
+        <EditText
+            android:id="@+id/edt_create_folder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:background="@null"
+            android:fontFamily="@font/sf_pro_medium"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/text_blue"
+            android:textCursorDrawable="@drawable/ic_cursor_edittext"
+            android:textSize="@dimen/text15sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_folder"
+            app:layout_constraintEnd_toStartOf="@+id/iv_cancel_create"
+            app:layout_constraintStart_toEndOf="@id/iv_folder"
+            app:layout_constraintTop_toTopOf="@id/iv_folder" />
+        <!--        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 đàáảãạăắằẳẵặâấầẩẫậòóỏõọôồốổỗộơờớởỡợèéẻẽẹêềếểễệìíỉĩịùúủũụưừứửữựỳýỷỹỵÁÀÃẢẠĂẰẮẲẴẶÂẦẤẨẪẬÔỒỐỔỖỘƠỜỚỞỠỢÊỀẾỂỄỆỪƯỨỬỮỰĐÒÓỎÕỌÌÍỈĨỊÈÉẺẼẸÙÚỦŨỤỲÝỶỸỴ"-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_allow_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/margin_4"
+            android:src="@drawable/ic_allow_create_folder"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_folder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_folder" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cancel_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/margin_4"
+            android:src="@drawable/ic_cancel_create_folder"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_folder"
+            app:layout_constraintEnd_toStartOf="@id/iv_allow_create"
+            app:layout_constraintTop_toTopOf="@id/iv_folder" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_list_folder_browse"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_15"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:paddingStart="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_folder"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_recent_file" />
+
+        <vn.tapbi.zazip.ui.custom.RecyclerFastScroller
+            android:id="@+id/fast_scroll_browse"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:rfs_touchTargetWidth="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/rcv_list_folder_browse" />
+        <ProgressBar
+            android:id="@+id/processBar"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/rcv_list_folder_browse"
+            app:layout_constraintLeft_toLeftOf="@+id/rcv_list_folder_browse"
+            app:layout_constraintRight_toRightOf="@+id/rcv_list_folder_browse"
+            app:layout_constraintTop_toTopOf="@+id/rcv_list_folder_browse" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/rcv_list_folder_browse"
+            app:layout_constraintEnd_toEndOf="@+id/rcv_list_folder_browse"
+            app:layout_constraintStart_toStartOf="@+id/rcv_list_folder_browse"
+            app:layout_constraintTop_toTopOf="@+id/rcv_list_folder_browse" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_select"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_button36"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="@dimen/margin_22"
+            android:background="@drawable/custom_bg_button_blue"
+            android:fontFamily="@font/sf_pro_medium"
+            android:text="@string/select"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text17sp"
+            app:layout_constraintBottom_toBottomOf="@id/rcv_list_folder_browse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

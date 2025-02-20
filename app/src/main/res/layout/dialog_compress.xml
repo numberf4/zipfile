@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="vn.tapbi.zazip.ui.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inset_custom_bg_dialog"
+        android:paddingHorizontal="@dimen/margin_32dp"
+        android:paddingTop="@dimen/margin_16">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cancel_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/margin_4"
+            android:src="@drawable/ic_cancel_dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_compress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_compress" />
+
+        <TextView
+            android:id="@+id/tv_compress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="@font/sf_pro_medium"
+            android:text="@string/compress"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_compress_fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/file_name"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_compress" />
+
+        <EditText
+            android:id="@+id/edt_compress_fileName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin_6"
+            android:background="@drawable/custom_bg_edt"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@id/edt_pass"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:textColor="@color/text_blue"
+            android:textCursorDrawable="@drawable/ic_cursor_edittext"
+            app:layout_constraintTop_toBottomOf="@id/tv_compress_fileName" />
+
+        <TextView
+            android:id="@+id/tv_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/folder"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_compress_fileName" />
+
+        <TextView
+            android:id="@+id/tv_compress_folder"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin_6"
+            android:background="@drawable/custom_bg_edt"
+            android:drawableEnd="@drawable/ic_folder_edt"
+            android:drawablePadding="@dimen/margin_4"
+            android:ellipsize="start"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:padding="@dimen/margin_6"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/margin_16"
+            android:scrollbars="horizontal"
+            android:singleLine="true"
+            android:textColor="@color/text_blue"
+            app:layout_constraintTop_toBottomOf="@id/tv_folder" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_achive_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/archive_format"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_compress_folder" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_format"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_6"
+            android:background="@drawable/custom_bg_edt"
+            android:dropDownHeight="100dp"
+            android:dropDownVerticalOffset="-25dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_achive_format" />
+
+        <TextView
+            android:id="@+id/tvWarningFormatBeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:textSize="@dimen/text12sp"
+            android:visibility="gone"
+            android:textColor="@color/warning_format"
+            android:text="@string/warning_format_beta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_format" />
+
+        <TextView
+            android:id="@+id/tv_compress_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/password"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWarningFormatBeta" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctl_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6"
+            android:background="@drawable/custom_bg_edt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_compress_password">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_pass"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginEnd="@dimen/margin_4"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/margin_16"
+                android:textColor="@color/text_blue"
+                android:textColorHint="@color/hint_edittext"
+                android:textCursorDrawable="@drawable/ic_cursor_edittext"
+                android:textSize="@dimen/text15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_show_pass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_show_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:src="@drawable/ic_show_pass"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.widget.Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="@dimen/height_button36"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_27"
+            android:background="@drawable/bg_button_effect"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ctl_pass" />
+
+        <android.widget.Button
+            android:id="@+id/btn_compress"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/height_button36"
+            android:layout_marginBottom="@dimen/margin_27"
+            android:background="@drawable/bg_button_effect"
+            android:text="@string/compress"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/ctl_pass" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

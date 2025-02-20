@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mail_feedback_zazip" translatable="false">tapbi.developer@gmail.com</string>
+    <string name="link_policy" translatable="false">https://www.google.com.vn</string>
+
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_reward_id" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="admob_interstitial_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="id_admob_native" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="admob_ads_open_id" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="admob_id_open_app" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+</resources>

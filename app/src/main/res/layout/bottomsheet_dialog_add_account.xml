@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_style_bottom_sheet_dialog">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="36dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/custom_line_bottom_sheet_dialog_add_account"
+            app:layout_constraintBottom_toTopOf="@id/layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_add_account_gg_drive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_item_add_account"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_icon_add"
+                android:drawablePadding="24dp"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/margin_24"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="@string/add_google_drive_account"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_icon_gg_drive"
+                app:layout_constraintBottom_toTopOf="@id/tv_add_account_one_drive"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/view_gg_drive"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="70dp"
+                android:background="#e0e0e0"
+                app:layout_constraintBottom_toTopOf="@id/tv_add_account_one_drive"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_add_account_one_drive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_item_add_account"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_icon_add"
+                android:drawablePadding="24dp"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/margin_24"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="@string/add_onedrive_account"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_icon_one_drive"
+                app:layout_constraintBottom_toTopOf="@id/view_one_drive"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/view_one_drive"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="70dp"
+                android:background="#e0e0e0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_add_account_one_drive" />
+
+            <TextView
+                android:id="@+id/tv_add_account_drop_box"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/ripple_item_add_account"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_icon_add"
+                android:drawablePadding="24dp"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_medium"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/margin_24"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="@string/add_dropbox_account"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/icon_dropbox"
+                app:layout_constraintTop_toBottomOf="@id/view_one_drive" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,2 @@
+rootProject.name = "Zazip"
+include ':app',':libp7zip',':librate-ios'

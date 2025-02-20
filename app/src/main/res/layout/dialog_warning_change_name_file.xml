@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margin_16"
+        android:paddingVertical="@dimen/margin_30"
+        android:background="@drawable/custom_bg_dialog">
+
+        <TextView
+            android:id="@+id/tv_content_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_20"
+            android:textSize="@dimen/text18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/text_black"
+            android:text="@string/change_file_extension"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_content_warning2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_20"
+            android:textSize="@dimen/text_16sp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/text_black"
+            android:text="@string/the_file_extention_will_be_changed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_content_warning" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel_reformat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_44"
+            android:paddingHorizontal="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_30"
+            android:background="@drawable/bg_button_effect"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            app:layout_constraintTop_toBottomOf="@id/tv_content_warning2" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ok_reformat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_44"
+            android:paddingHorizontal="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_30"
+            android:background="@drawable/bg_button_effect_gray"
+            android:text="@string/change"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_16sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            app:layout_constraintTop_toBottomOf="@id/tv_content_warning2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
